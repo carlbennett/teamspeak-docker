@@ -30,6 +30,6 @@ if [ ! -f /opt/teamspeak/licensekey.dat ] \
 fi
 
 # Run the teamspeak server
-export LD_LIBRARY_PATH=/opt/teamspeak
+export LD_LIBRARY_PATH=/opt/teamspeak:/opt/tsdata:$LD_LIBRARY_PATH
 cd /opt/teamspeak
 ./ts3server logpath=/opt/tsdata/logs
