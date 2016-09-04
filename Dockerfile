@@ -21,6 +21,9 @@ ADD ./entrypoint.sh /opt/entrypoint.sh
 
 EXPOSE 9987/udp 30033 10011
 
+RUN    mkdir /opt/tsdata
+VOLUME ["/opt/tsdata"]
+
 USER nobody
 
 ENTRYPOINT ["/opt/entrypoint.sh"]
